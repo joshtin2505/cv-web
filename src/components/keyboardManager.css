@@ -1,0 +1,6 @@
+kbd {
+  @apply bg-neutral-500 p-[2px] px-1 rounded shadow-sm;
+}
+.onSelect {
+  @apply focus:bg-neutral-500 text-white;
+}
