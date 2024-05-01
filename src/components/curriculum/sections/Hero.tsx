@@ -1,9 +1,10 @@
 import { basics } from "@/mocks/cv.json"
 import Section from "../Section"
-import { Gmail as Mail, GitHub, LinkedIn, X } from "../icons/SocialIcons"
-import { WorldMap, Phone } from "../icons/OthersIcons"
+import { Gmail as Mail, GitHub, LinkedIn, X } from "../../icons/SocialIcons"
+import { WorldMap, Phone } from "../../icons/OthersIcons"
 import { SVGProps } from "react"
 import Image from "next/image"
+import './Hero.css'
 
 function Hero() {
   const { name, label, email, image, location, phone, profiles } = basics
@@ -26,10 +27,10 @@ function Hero() {
   const printInfo = [email, phone, linkedinUrl].filter(Boolean).join(" • ")
   return (
     <Section>
-      <div className="container">
+      <div className="hero-container">
         <div className="info">
-          <h1>{name}</h1>
-          <h2>{label}</h2>
+          <h1 className="text-4xl">{name}</h1>
+          <h2 c>{label}</h2>
           <span>
             <WorldMap />
             {city === null && region === null
