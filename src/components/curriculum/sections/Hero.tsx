@@ -4,7 +4,7 @@ import { Gmail as Mail, GitHub, LinkedIn, X } from "../../icons/SocialIcons"
 import { WorldMap, Phone } from "../../icons/OthersIcons"
 import { SVGProps } from "react"
 import Image from "next/image"
-import './Hero.css'
+import "./Hero.css"
 
 function Hero() {
   const { name, label, email, image, location, phone, profiles } = basics
@@ -30,7 +30,7 @@ function Hero() {
       <div className="hero-container">
         <div className="info">
           <h1 className="text-4xl">{name}</h1>
-          <h2 c>{label}</h2>
+          <h2>{label}</h2>
           <span>
             <WorldMap />
             {city === null && region === null
