@@ -61,7 +61,7 @@ const CommantPalette = ({ socials }: { socials?: SocialKeymaps }) => {
   }
   return (
     <CommandDialog
-      className="w-96 bg-neutral-400/10 p-2 rounded-md absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1 flex flex-col gap-2"
+      className="print:hidden w-96 bg-neutral-400/10 p-2 rounded-md absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1 flex flex-col gap-2"
       open={open}
       onOpenChange={setOpen}
       label="Buscar Commandos"
