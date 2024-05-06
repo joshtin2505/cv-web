@@ -2,13 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 body {
-  @apply  bg-white dark:bg-[#111] ;
-    scrollbar-width: thin;
-		scrollbar-color: #ccc #eee;
-		scrollbar-arrow-color: transparent;
+  @apply bg-white dark:bg-black flex flex-col text-gray-100;
+  scrollbar-width: thin;
+  scrollbar-color: #ccc #eee;
+  scrollbar-arrow-color: transparent;
 }
 
 @layer utilities {
