@@ -9,7 +9,8 @@ h2 {
   @apply text-xl font-medium text-neutral-700 text-balance dark:text-neutral-300;
 }
 img {
-  @apply w-32 h-32 rounded-md object-cover aspect-square;
+  box-shadow: 6px 6px 0 0 #000;
+  @apply w-36 h-36 rounded-md object-cover aspect-square;
 }
 span {
   @apply text-sm text-neutral-600 dark:text-neutral-400 flex items-center gap-1 tracking-tight;
@@ -18,29 +19,13 @@ footer {
   @apply flex gap-1 text-xs text-neutral-500 dark:text-neutral-400 mt-2;
 }
 footer a {
-  @apply text-neutral-500 dar inline-flex items-center justify-center border hover:bg-[#eee] hover:border-[#ddd] border-[#eee] rounded-md p-1 h-8 w-8 transition-all duration-300;
-}
-.print {
-  display: none;
+  @apply text-neutral-500 dark:text-neutral-400 dark:border-neutral-700 dark:hover:bg-neutral-700 dark:hover:border-neutral-400 inline-flex items-center justify-center border hover:bg-neutral-100 hover:border-neutral-200 border-neutral-100 rounded-md p-1 h-8 w-8 transition-all duration-300;
 }
 
-html.dark footer a {
-  color: #ddd;
-  border-color: #333;
-}
-html.dark footer a:hover {
-  background-color: #333;
-  border-color: #aaa;
-}
 html.dark span {
   color: #ccc;
 }
-html.dark h2 {
-  color: #eee;
-}
-html.dark h1 {
-  color: #fff;
-}
+
 @media screen and (max-width: 450px) {
   .container {
     flex-direction: column-reverse;
@@ -51,14 +36,5 @@ html.dark h1 {
       justify-content: center;
       align-items: center;
     }
-  }
-}
-
-@media print {
-  .print {
-    display: block;
-  }
-  .no-print {
-    display: none;
   }
 }
