@@ -4,7 +4,7 @@ import Hero from "@/components/curriculum/sections/Hero"
 function page() {
   return (
     <>
-      <main className="p-4 m-auto w-full relative">
+      <main className="flex min-h-screen flex-col items-center justify-between p-24 relative">
         <Hero />
       </main>
       <KeyboardManager />
