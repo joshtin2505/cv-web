@@ -1,12 +1,12 @@
 import { basics } from "@/mocks/cv.json"
 import Section from "../Section"
-import { Gmail as Mail, GitHub, LinkedIn, X } from "../../icons/SocialIcons"
+import { Mail, GitHub, LinkedIn, X } from "../../icons/SocialIcons"
 import { WorldMap, Phone } from "../../icons/OthersIcons"
 import { SVGProps } from "react"
 import Image from "next/image"
 import "./Hero.css"
 
-function Hero() {
+function Hero({}) {
   const { name, label, email, image, location, phone, profiles } = basics
 
   const SOCIAL_ICONS: Record<
@@ -26,10 +26,10 @@ function Hero() {
 
   const printInfo = [email, phone, linkedinUrl].filter(Boolean).join(" • ")
   return (
-    <Section>
+    <Section id={"herow"}>
       <div className="hero-container">
         <div className="info">
-          <h1 className="text-4xl">{name}</h1>
+          <h1 className="text-4xl dark:text-white">{name}</h1>
           <h2>{label}</h2>
           <span>
             <WorldMap />
@@ -37,8 +37,8 @@ function Hero() {
               ? "Ubicación desconocida"
               : `${city}, ${region}`}
           </span>
-          <footer className="print">{printInfo}</footer>
-          <footer className="no-Print">
+          <footer className="hidden print:block ">{printInfo}</footer>
+          <footer className="print:hidden">
             {email && (
               <a
                 href={`mailto:${email}`}
@@ -78,7 +78,7 @@ function Hero() {
           </footer>
         </div>
         <figure>
-          <Image width={128} height={128} src={image} alt={name} />
+          <Image width={1000} height={1000} src={image} alt={name} />
         </figure>
       </div>
     </Section>
