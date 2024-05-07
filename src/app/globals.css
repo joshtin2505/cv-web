@@ -20,4 +20,7 @@ html {
   .text-balance {
     text-wrap: balance;
   }
+  .grid-template-colums-auto-fill {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
 }
