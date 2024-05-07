@@ -3,10 +3,11 @@
 @tailwind utilities;
 
 html {
-  @apply bg-white dark:bg-black flex flex-col text-gray-100;
+  @apply bg-white dark:bg-black tracking-tight text-neutral-800 dark:text-neutral-300  font-mono-mono;
   scrollbar-width: thin;
   scrollbar-color: #ccc #eee;
   scrollbar-arrow-color: transparent;
+  box-sizing: border-box;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -15,7 +16,22 @@ html {
     scrollbar-arrow-color: transparent;
   }
 }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply font-bold text-neutral-900 dark:text-neutral-100 font-sans-sans;
+}
 
+p {
+  @apply font-mono-mono text-sm;
+}
+h1 {
+  @apply text-2xl;
+  unicode-bidi: isolate;
+}
 @layer utilities {
   .text-balance {
     text-wrap: balance;
