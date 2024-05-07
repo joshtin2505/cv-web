@@ -14,6 +14,29 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+    fontFamily: {
+      "mono-mono": [
+        "Menlo",
+        "Monaco",
+        "Lucida Console",
+        "Courier New",
+        "Courier",
+        "monospace",
+      ],
+      "sans-sans": [
+        "system-ui",
+        "-apple-system",
+        "BlinkMacSystemFont",
+        "Segoe UI",
+        "Roboto",
+        "Oxygen",
+        "Ubuntu",
+        "Cantarell",
+        "Open Sans",
+        "Helvetica Neue",
+        "sans-serif",
+      ],
+    },
     screens: {
       "max-2xl": { max: "1535px" },
       // => @media (max-width: 1535px) { ... }
