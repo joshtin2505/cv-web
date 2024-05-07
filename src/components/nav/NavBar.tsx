@@ -3,6 +3,7 @@ import Link from "next/link"
 import "./NavBar.css"
 import { useEffect, useState } from "react"
 import "./NavBar.css"
+import Logo from "../Logo"
 
 function NavBar() {
   const [os, setOs] = useState("")
@@ -27,15 +28,11 @@ function NavBar() {
   return (
     <header className=" top-0 w-full h-auto print:hidden">
       <nav className="flex items-center px-8 justify-between border-b dark:border-b-white/30 ">
-        <Link href="/#hero" className="logo cursor-pointer">
-          <h3 className="text-2xl font-mono hover:underline underline-offset-4">
-            Joshtin.Dev
-          </h3>
-        </Link>
+        <Logo />
         <ul className="flex justify-between items-center p-4 w-auto gap-3">
           <li>
             <div
-              className="flex w-48 justify-between bg-neutral-950 rounded pl-2 py-1"
+              className="flex w-48 justify-between bg-neutral-900 rounded pl-2 py-1"
               onClick={() => console.log("Search")}
             >
               <span className="text-neutral-500">Serch...</span>
