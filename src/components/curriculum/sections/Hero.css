@@ -1,5 +1,5 @@
 .hero-container {
-  @apply flex justify-between items-center gap-1;
+  @apply flex w-auto justify-between items-center;
 }
 .info {
   @apply flex flex-col gap-2 pr-8;
