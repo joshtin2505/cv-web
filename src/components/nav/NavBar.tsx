@@ -3,7 +3,7 @@ import Link from "next/link"
 import "./NavBar.css"
 import { useEffect, useState } from "react"
 import "./NavBar.css"
-import Logo from "../Logo"
+import Logo from "../logo/Logo"
 
 function NavBar() {
   const [os, setOs] = useState("")
