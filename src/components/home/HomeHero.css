@@ -1,0 +1,40 @@
+.name {
+  display: block;
+  white-space: nowrap;
+  border-right: 4px solid;
+  width: 15ch;
+  overflow: hidden;
+  animation: typing 1s steps(15), blink 0.5s infinite step-end alternate;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+.rainbow {
+  animation: 6s ease 0s infinite alternate none running rainbow;
+}
+
+@keyframes rainbow {
+  0% {
+    color: #f04dff;
+  }
+  25% {
+    color: #ff4d4d;
+  }
+  50% {
+    color: #ffc54d;
+  }
+  75% {
+    color: #6aed76;
+  }
+  100% {
+    color: #09f;
+  }
+}
