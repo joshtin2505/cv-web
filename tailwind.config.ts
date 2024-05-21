@@ -23,6 +23,16 @@ const config: Config = {
         "Courier",
         "monospace",
       ],
+      mono: [
+        "ui-monospace",
+        "SFMono-Regular",
+        "Menlo",
+        "Monaco",
+        "Consolas",
+        "Liberation Mono",
+        "Courier New",
+        "monospace",
+      ],
       "sans-sans": [
         "system-ui",
         "-apple-system",
