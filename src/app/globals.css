@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
+body {
   @apply bg-white dark:bg-black tracking-tight text-neutral-800 dark:text-neutral-300  font-mono-mono;
   scrollbar-width: thin;
   scrollbar-color: #ccc #eee;
