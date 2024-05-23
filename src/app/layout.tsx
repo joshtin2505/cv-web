@@ -3,6 +3,7 @@ import { Inter } from "next/font/google"
 import "./globals.css"
 import { basics } from "@/mocks/cv.json"
 import NavBar from "@/components/nav/NavBar"
+import Cover from "@/components/Cover"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -19,14 +20,15 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="">
       <head>
         <link rel="shortcut icon" href={image} type="image/x-icon" />
       </head>
       <body className={inter.className}>
-        <NavBar />
-
-        {children}
+        <Cover>
+          <NavBar />
+          {children}
+        </Cover>
       </body>
     </html>
   )
