@@ -8,8 +8,7 @@
 h2 {
   @apply text-xl font-medium text-neutral-700 text-balance dark:text-neutral-300;
 }
-img {
-  box-shadow: 6px 6px 0 0 #000;
+div figure img {
   @apply w-36 h-36 rounded-md object-cover aspect-square;
 }
 span {
