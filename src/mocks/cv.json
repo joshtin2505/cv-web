@@ -207,24 +207,22 @@
     ],
     "projects": [
       {
-        "name": "Optigestion client",
-        "isActive": true,
+        "name": "Optigestion",
+        "isActive": null,
         "description": "Gestion de compras para empresas y fundaciones, maneja tus compras de manera eficiente y segura.",
         "highlights": [
           "Gestiona mejor tus compras",
           "Version 2.0"
         ],
-        "url": "https://github.com/joshtin2505/optigestion-2-front"
-      },
-      {
-        "name": "La Casita De Papel Ecommerce",
-        "isActive": true,
-        "description": "Pagina Web e commerce para la tienda La Casita De Papel",
-        "highlights": [
-          "E-Commerce",
-          "En desarrollo"
+        "tecnolgies": [
+          "React", "MongoDB", "Express.js", "Node.js", "Spring Boot", "Java", "PostgresSQL"
         ],
-        "url": "https://github.com/joshtin2505/lccp-ecommerce"
+        "img": [
+        "https://raw.githubusercontent.com/joshtin2505/optigestion/master/mocks/image%201.png",
+        "https://raw.githubusercontent.com/joshtin2505/optigestion/master/mocks/image%202.png",
+        "https://raw.githubusercontent.com/joshtin2505/optigestion/master/mocks/image%2026.png",
+        "https://raw.githubusercontent.com/joshtin2505/optigestion/master/mocks/image%2031.png"],
+        "url": "https://github.com/joshtin2505/optigestion-2-front"
       }
     ]
   }
