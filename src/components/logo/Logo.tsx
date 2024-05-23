@@ -4,12 +4,11 @@ import "./Logo.css"
 
 function Logo() {
   return (
-    <Link
-      href="/#hero"
-      className="logo cursor-pointer text-2xl font-mono flex items-center gap-1 font-semibold"
-    >
-      <FaCode className="text-red-400" />
-      <span className="titleLogo">Joshtin.Dev</span>
+    <Link href="/" className="logo cursor-pointer flex items-center gap-1 ">
+      <FaCode className="text-red-400 text-2xl" />
+      <h2 className="titleLogo text-2xl font-mono font-semibold">
+        Joshtin.Dev
+      </h2>
     </Link>
   )
 }
