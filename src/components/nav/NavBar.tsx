@@ -1,13 +1,12 @@
 "use client"
 import Link from "next/link"
 import "./NavBar.css"
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import "./NavBar.css"
 import Logo from "../logo/Logo"
 
 function NavBar() {
   const [os, setOs] = useState("")
-
   useEffect(() => {
     const userAgent = window.navigator.userAgent
     if (userAgent.includes("Win")) {
@@ -25,15 +24,26 @@ function NavBar() {
     }
   }, [])
 
+  const simulateCtrlK = useCallback(() => {
+    const event = new KeyboardEvent("keydown", {
+      bubbles: true,
+      cancelable: true,
+      ctrlKey: true,
+      key: "k",
+    })
+
+    document.dispatchEvent(event)
+  }, [])
+
   return (
-    <header className=" top-0 w-full h-auto print:hidden">
-      <nav className="flex items-center px-8 justify-between border-b dark:border-b-white/30 ">
+    <header className="top-0 w-full h-auto print:hidden fixed backdrop-blur-md backdrop-saturate-[180%] z-10">
+      <nav className="flex items-center px-8 justify-between border-b dark:border-b-neutral-600 ">
         <Logo />
         <ul className="flex justify-between items-center p-4 w-auto gap-3">
           <li>
             <div
-              className="flex w-48 justify-between bg-neutral-900 rounded pl-2 py-1"
-              onClick={() => console.log("Search")}
+              className="flex w-48 justify-between bg-neutral-100 dark:bg-neutral-900 rounded pl-2 py-1"
+              onClick={simulateCtrlK}
             >
               <span className="text-neutral-500">Serch...</span>
               {os === "MacOS" ? (
