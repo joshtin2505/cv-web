@@ -125,11 +125,12 @@ type Language =
 
 interface Projects {
   name: string
-  isActive: boolean
+  isActive: boolean | null
   description: string
   highlights: Highlight
   url: string
-  github?: string
+  img: string[] | []
+  tecnolgies: string[] | []
 }
 
 interface Interests {
@@ -143,3 +144,24 @@ interface References {
 }
 
 type Highlight = Array<String>
+
+export type {
+  CV,
+  Basics,
+  Location,
+  Profiles,
+  Work,
+  Volunteer,
+  Skills,
+  Awards,
+  Certificates,
+  Publications,
+  Education,
+  Languages,
+  Language,
+  Projects,
+  Interests,
+  References,
+  Highlight,
+  DateStr,
+}
