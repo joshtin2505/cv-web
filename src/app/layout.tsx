@@ -1,4 +1,4 @@
-import type { Metadata } from "next"
+import type Metadata from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { basics } from "@/mocks/cv.json"
@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] })
 const { name, label, summary, image } = basics
 
 export const metadata: Metadata = {
-  title: `${name} - ${label}`,
+  title: `Joshtin.dev - ${label}`,
   description: `${name} - ${label} - ${summary}`,
 }
 
