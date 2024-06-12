@@ -22,13 +22,18 @@
         },
         {
           "network": "X",
-          "username": "midudev",
+          "username": "joshtin2505",
           "url": "https://x.com/joshtin2505"
         },
         {
           "network": "GitHub",
-          "username": "midudev",
+          "username": "joshtin2505",
           "url": "https://github.com/joshtin2505"
+        },
+        {
+          "network": "NPM",
+          "username": "joshtindev",
+          "url": "https://www.npmjs.com/~joshtindev"
         }
       ]
     },
