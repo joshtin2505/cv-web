@@ -1,9 +1,8 @@
-import type Metadata from "next"
+import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
 import { basics } from "@/mocks/cv.json"
-import NavBar from "@/components/nav/NavBar"
-import Cover from "@/components/Cover"
+import CoverProvider from "@/components/Cover"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -25,10 +24,7 @@ export default function RootLayout({
         <link rel="shortcut icon" href={image} type="image/x-icon" />
       </head>
       <body className={inter.className}>
-        <Cover>
-          <NavBar />
-          {children}
-        </Cover>
+        <CoverProvider>{children}</CoverProvider>
       </body>
     </html>
   )
