@@ -37,7 +37,7 @@ function NavBar() {
 
   return (
     <header className="top-0 w-full h-auto print:hidden fixed backdrop-blur-md backdrop-saturate-[180%] z-10">
-      <nav className="flex items-center px-8 justify-between border-b dark:border-b-neutral-600 ">
+      <nav className="flex items-center px-8 justify-between border-b dark:border-b-neutral-800 ">
         <Logo />
         <ul className="flex justify-between items-center p-4 w-auto gap-3">
           <li>
