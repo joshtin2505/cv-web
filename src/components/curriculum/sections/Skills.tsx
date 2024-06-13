@@ -1,6 +1,7 @@
 import Section from "../Section"
-import { skills } from "@/mocks/cv.json"
+import cvJson from "@/mocks/cv.json"
 function Skills() {
+  const { skills } = cvJson
   return (
     <Section title="Habilidades">
       <ul className="inline-flex flex-wrap justify-center gap-1">
