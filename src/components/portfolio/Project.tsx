@@ -1,7 +1,7 @@
-import cvMock from "@/mocks/cv.json"
+import cvJson from "@/mocks/cv.json"
 import CardProject from "../ui/CardProject"
 function ProjectsPortfolio() {
-  const { projects } = cvMock
+  const { projects } = cvJson
   return (
     <section className="flex gap-2">
       {projects.length !== 0 ? (
