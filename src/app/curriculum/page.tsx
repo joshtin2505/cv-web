@@ -1,4 +1,5 @@
 import KeyboardManager from "@/components/KeyboardManager"
+import Basic from "@/components/Layouts/BasicLayout"
 import About from "@/components/curriculum/sections/About"
 import Education from "@/components/curriculum/sections/Education"
 import Experience from "@/components/curriculum/sections/Experience"
@@ -9,14 +10,14 @@ import Skills from "@/components/curriculum/sections/Skills"
 function page() {
   return (
     <>
-      <main className=" min-h-screen p-24 relative">
+      <Basic className="p-24 pt-10 print:py-0 relative ">
         <Hero />
         <About />
         <Experience />
         <Education />
         <Projects />
         <Skills />
-      </main>
+      </Basic>
       <KeyboardManager />
     </>
   )
