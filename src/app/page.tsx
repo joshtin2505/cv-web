@@ -1,5 +1,5 @@
 import KeyboardManager from "@/components/KeyboardManager"
-import Basic from "@/components/Layouts/BaisicLayout"
+import Basic from "@/components/Layouts/BasicLayout"
 import HomeHero from "@/components/home/HomeHero"
 import ProjectsPortfolio from "@/components/portfolio/Project"
 
