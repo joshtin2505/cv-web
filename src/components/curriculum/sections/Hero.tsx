@@ -1,12 +1,14 @@
-import { basics } from "@/mocks/cv.json"
+import cvJson from "@/mocks/cv.json"
 import Section from "../Section"
 import { Mail, GitHub, LinkedIn, X } from "../../icons/SocialIcons"
 import { WorldMap, Phone } from "../../icons/OthersIcons"
 import { SVGProps } from "react"
 import Image from "next/image"
 import "./Hero.css"
+import { FaNpm } from "react-icons/fa6"
 
 function Hero({}) {
+  const { basics } = cvJson
   const { name, label, email, image, location, phone, profiles } = basics
 
   const SOCIAL_ICONS: Record<
@@ -16,6 +18,7 @@ function Hero({}) {
     LinkedIn,
     GitHub,
     X,
+    NPM: FaNpm,
   }
 
   const linkedinUrl = profiles.find(
