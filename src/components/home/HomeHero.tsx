@@ -3,6 +3,7 @@ import React from "react"
 import cvJson from "@/mocks/cv.json"
 import "./HomeHero.css"
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaNpm } from "react-icons/fa6"
+import Link from "next/link"
 
 function HomeHero() {
   const { basics } = cvJson
@@ -38,24 +39,42 @@ function HomeHero() {
           {/* sI CAMBIAS EL  ORDEN DEL JSON PUEDES CAUSAR UN ERROR EN EL DIRECCIONAMIENTTO, CORRIGE ESO */}
           <ul className=" flex w-44 md:mt-0 mt-2 md:opacity-100 opacity-80 justify-around">
             <li>
-              <a href={`mailto:${basics.email}`} className=" ">
-                <FaEnvelope className="h-7 w-7 transition-all hover:boder-2 dark:hover:text-white/70 dark:text-white dark:bg-neutral-800/50 dark:hover:bg-neutral-500/20 p-1 rounded dark:border-neutral-800 border" />
+              <a
+                href={`mailto:${basics.email}`}
+                className=" h-7 w-7 transition-all hover:boder-2 dark:hover:text-white/70 dark:text-white dark:bg-neutral-800/50 dark:hover:bg-neutral-500/20 p-1 rounded dark:border-neutral-800 border"
+              >
+                <FaEnvelope size={24} />
               </a>
             </li>
             <li>
-              <a href={`{basics.profiles[0]}`} className=" ">
-                <FaLinkedinIn className="h-7 w-7 transition-all hover:boder-2 dark:hover:text-white/70 dark:text-white dark:bg-neutral-800/50 dark:hover:bg-neutral-500/20 p-1 rounded dark:border-neutral-800 border" />
-              </a>
+              <Link
+                href={`${basics.profiles[0].url}`}
+                rel="noreferrer"
+                target="_blank"
+                className=" h-7 w-7 transition-all hover:boder-2 dark:hover:text-white/70 dark:text-white dark:bg-neutral-800/50 dark:hover:bg-neutral-500/20 p-1 rounded dark:border-neutral-800 border"
+              >
+                <FaLinkedinIn size={24} />
+              </Link>
             </li>
             <li>
-              <a href={`{basics.profiles[2]}`} className=" ">
-                <FaGithub className="h-7 w-7 transition-all hover:boder-2 dark:hover:text-white/70 dark:text-white dark:bg-neutral-800/50 dark:hover:bg-neutral-500/20 p-1 rounded dark:border-neutral-800 border" />
-              </a>
+              <Link
+                href={`${basics.profiles[2].url}`}
+                rel="noreferrer"
+                target="_blank"
+                className=" h-7 w-7 transition-all hover:boder-2 dark:hover:text-white/70 dark:text-white dark:bg-neutral-800/50 dark:hover:bg-neutral-500/20 p-1 rounded dark:border-neutral-800 border"
+              >
+                <FaGithub size={24} />
+              </Link>
             </li>
             <li>
-              <a href={`{basics.profiles[3]}`} className=" ">
-                <FaNpm className="h-7 w-7 transition-all hover:boder-2 dark:hover:text-white/70 dark:text-white dark:bg-neutral-800/50 dark:hover:bg-neutral-500/20 p-1 rounded dark:border-neutral-800 border" />
-              </a>
+              <Link
+                href={`${basics.profiles[3].url}`}
+                rel="noreferrer"
+                target="_blank"
+                className=" h-7 w-7 transition-all hover:boder-2 dark:hover:text-white/70 dark:text-white dark:bg-neutral-800/50 dark:hover:bg-neutral-500/20 p-1 rounded dark:border-neutral-800 border"
+              >
+                <FaNpm size={24} />
+              </Link>
             </li>
           </ul>
         </footer>
