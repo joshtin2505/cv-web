@@ -1,10 +1,11 @@
 import Image from "next/image"
 import React from "react"
-import { basics } from "@/mocks/cv.json"
+import cvJson from "@/mocks/cv.json"
 import "./HomeHero.css"
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaNpm } from "react-icons/fa6"
 
 function HomeHero() {
+  const { basics } = cvJson
   return (
     <section
       style={{ minHeight: "calc(100dvh - 69px)" }}
