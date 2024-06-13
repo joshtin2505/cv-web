@@ -1,4 +1,3 @@
-import React from "react"
 import type { Projects } from "@/cv.d"
 import Link from "next/link"
 import Image from "next/image"
