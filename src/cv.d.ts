@@ -1,4 +1,4 @@
-export interface CV {
+interface CV {
   basics: Basics
   work: Array<Work>
   volunteer: Array<Volunteer>
