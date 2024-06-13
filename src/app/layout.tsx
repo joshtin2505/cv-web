@@ -1,11 +1,12 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import "./globals.css"
-import { basics } from "@/mocks/cv.json"
+import cvJson from "@/mocks/cv.json"
 import CoverProvider from "@/components/Cover"
 
 const inter = Inter({ subsets: ["latin"] })
 
+const { basics } = cvJson
 const { name, label, summary, image } = basics
 
 export const metadata: Metadata = {
