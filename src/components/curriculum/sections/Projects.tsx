@@ -1,7 +1,8 @@
 import Link from "next/link"
 import Section from "../Section"
-import { projects } from "@/mocks/cv.json"
+import cvJson from "@/mocks/cv.json"
 function Projects() {
+  const { projects } = cvJson
   return (
     <Section title="Proyectos">
       <ul className="grid grid-template-colums-auto-fill gap-2">
