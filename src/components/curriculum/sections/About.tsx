@@ -1,7 +1,8 @@
 import Section from "../Section"
-import { basics } from "@/mocks/cv.json"
+import cvJson from "@/mocks/cv.json"
 
 function About() {
+  const { basics } = cvJson
   const { summary } = basics
   return (
     <Section title="Sobre Mí">
