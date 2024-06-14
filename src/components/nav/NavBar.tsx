@@ -49,12 +49,12 @@ function NavBar() {
         </button>
         <ul
           className={
-            "flex-col absolute sm:bg-transparent dark:bg-black/80 items-start [&>li]:bg-neutral-900 border sm:border-0 dark:border-neutral-800 rounded sm:[&>li]:bg-transparent [&>li]:px-1 sm:[&>li]:px-0 [&>li]:rounded [&>li]:py-1 [&>li]:transition-colors  hover:[&>li]:bg-neutral-700 backdrop-blur-md sm:backdrop-blur-none z-20 -bottom-[135px] right-1 sm:static sm:flex-row justify-center sm:justify-between sm:items-center p-4 w-auto gap-3 sm:flex " +
+            "flex-col absolute dark:sm:bg-transparent dark:bg-black/80 items-start border sm:border-0 dark:border-neutral-800 rounded  backdrop-blur-md sm:backdrop-blur-none z-20 -bottom-[135px] right-1 sm:static sm:flex-row justify-center sm:justify-between sm:items-center p-4 w-auto gap-3 sm:flex [&>li]:bg-neutral-900 sm:[&>li]:bg-transparent [&>li]:p-1 sm:[&>li]:p-0 [&>li]:rounded [&>li]:transition-colors  dark:hover:[&>li]:bg-neutral-700 dark:sm:hover:[&>li]:bg-transparent " +
             (!dropdown ? "hidden" : "flex")
           }
         >
           <li>
-            <div
+            <button
               className="hidden w-48 justify-between md:flex bg-neutral-100 dark:bg-neutral-900 rounded pl-2 py-1"
               onClick={simulateCtrlK}
             >
@@ -68,9 +68,9 @@ function NavBar() {
                   Ctrl + K
                 </kbd>
               )}
-            </div>
+            </button>
           </li>
-          <li>
+          <li className="dark:hover:text-white">
             <Link href="/curriculum">Curriculum</Link>
           </li>
           <li className="text-neutral-500  text-center">
