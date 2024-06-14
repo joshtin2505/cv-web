@@ -1,6 +1,5 @@
 .name {
-  display: block;
-  white-space: nowrap;
+  display: flex;
   border-right: 4px solid;
   width: 15ch;
   overflow: hidden;
