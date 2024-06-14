@@ -4,8 +4,10 @@ import "./NavBar.css"
 import { useCallback, useEffect, useState } from "react"
 import "./NavBar.css"
 import Logo from "../logo/Logo"
+import { FaBars } from "react-icons/fa6"
 
 function NavBar() {
+  const [dropdown, setDropdown] = useState(false)
   const [os, setOs] = useState("")
   useEffect(() => {
     const userAgent = window.navigator.userAgent
@@ -36,13 +38,24 @@ function NavBar() {
   }, [])
 
   return (
-    <header className="top-0 w-full h-auto print:hidden fixed backdrop-blur-md backdrop-saturate-[180%] z-10">
-      <nav className="flex items-center px-8 justify-between border-b dark:border-b-neutral-800 ">
+    <header className="top-0 w-full h-auto print:hidden sticky backdrop-blur-md backdrop-saturate-[180%] z-30 ">
+      <nav className="flex items-center px-8 justify-between border-b dark:border-b-neutral-800 h-[69px] relative">
         <Logo />
-        <ul className="flex justify-between items-center p-4 w-auto gap-3">
+        <button
+          className="sm:hidden transition dark:text-neutral-500 dark:hover:text-neutral-200 hover:scale-110 dark:active:text-neutral-300 dark:active:scale-100"
+          onClick={() => setDropdown((prevState) => !prevState)}
+        >
+          <FaBars size={24} />
+        </button>
+        <ul
+          className={
+            "flex-col absolute sm:bg-transparent dark:bg-black/80 items-start [&>li]:bg-neutral-900 border sm:border-0 dark:border-neutral-800 rounded sm:[&>li]:bg-transparent [&>li]:px-1 sm:[&>li]:px-0 [&>li]:rounded [&>li]:py-1 [&>li]:transition-colors  hover:[&>li]:bg-neutral-700 backdrop-blur-md sm:backdrop-blur-none z-20 -bottom-[135px] right-1 sm:static sm:flex-row justify-center sm:justify-between sm:items-center p-4 w-auto gap-3 sm:flex " +
+            (!dropdown ? "hidden" : "flex")
+          }
+        >
           <li>
             <div
-              className="flex w-48 justify-between bg-neutral-100 dark:bg-neutral-900 rounded pl-2 py-1"
+              className="hidden w-48 justify-between md:flex bg-neutral-100 dark:bg-neutral-900 rounded pl-2 py-1"
               onClick={simulateCtrlK}
             >
               <span className="text-neutral-500">Serch...</span>
