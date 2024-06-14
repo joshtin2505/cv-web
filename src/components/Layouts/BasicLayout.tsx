@@ -1,5 +1,6 @@
 import type { ReactNode } from "react"
 import NavBar from "../nav/NavBar"
+import Footer from "../Footer"
 
 function Basic({
   children,
@@ -12,6 +13,7 @@ function Basic({
     <>
       <NavBar />
       <main className={" " + className}>{children}</main>
+      <Footer />
     </>
   )
 }
