@@ -2,8 +2,9 @@ import Image from "next/image"
 import cvJson from "@/mocks/cv.json"
 import "./HomeHero.css"
 import { FaEnvelope, FaGithub, FaLinkedinIn, FaNpm } from "react-icons/fa6"
-import {} from "react-icons"
 import Link from "next/link"
+import Articulos from "./Articulos"
+import DevTemplates from "./DevTemplates"
 
 function HomeHero() {
   const { basics } = cvJson
@@ -17,12 +18,11 @@ function HomeHero() {
   }
   return (
     <section
-      style={{ minHeight: "calc(100dvh - 69px)" }}
+      style={{ height: "calc(100dvh - 69px)" }}
       className="w-full dark:bg-[url('/BgDarkHero.png')] bg-[url('/BgLightHero.png')] bg-cover bg-center bg-no-repeat relative before:absolute before:inset-0 before:bg-gradient-to-b before:from-transparent dark:before:to-black before:to-white "
     >
-      <div className="max-w-5xl mx-auto lg:px-0 sm:px-5 py-8 relative z-10">
+      <div className="max-w-5xl mx-auto lg:px-0 sm:px-5 py-8 relative z-10 h-full">
         <div className="md:block flex flex-col scale-75 sm:scale-100 ">
-          {/* <div className="flex items-start flex-col"> */}
           <header className="flex items-center md:justify-between justify-center">
             <div className="flex flex-col items-start justify-center gap-3 w-[400px]">
               <h1 className=" text-6xl font-mono tracking-tighter ">
@@ -47,11 +47,11 @@ function HomeHero() {
             </figure>
           </header>
           <footer className="md:w-full z-0 flex md:justify-between justify-center items-center mt-1 flex-col md:flex-row">
-            <h4 className="md:text-xl tracking-normal text-lg font-medium font-mono xs:tracking-wide opacity-50 text-nowrap ">
+            <h4 className="md:text-xl tracking-normal text-lg font-medium font-mono xs:tracking-wide  text-nowrap  dark:text-neutral-300 ">
               {basics.label}
             </h4>
             {/* sI CAMBIAS EL  ORDEN DEL JSON PUEDES CAUSAR UN ERROR EN EL DIRECCIONAMIENTTO, CORRIGE ESO */}
-            <ul className=" flex w-44 md:mt-0 mt-2 md:opacity-100 opacity-80 justify-around">
+            <ul className=" flex w-44 md:mt-0 mt-1 md:opacity-100 opacity-80 justify-around">
               <li className="h-7 w-7 transition-all hover:boder-2 dark:hover:text-white/70 dark:text-white dark:bg-neutral-800/50 dark:hover:bg-neutral-500/20 rounded dark:border-neutral-800 border">
                 <Link
                   className="w-full h-full grid place-items-center"
@@ -82,7 +82,10 @@ function HomeHero() {
               })}
             </ul>
           </footer>
-          {/* </div> */}
+        </div>
+        <div className="h-full flex items-center flex-col mt-20 px-5 sm:px-0">
+          <Articulos />
+          <DevTemplates />
         </div>
       </div>
     </section>
