@@ -11,7 +11,7 @@ function Basic({
   return (
     <>
       <NavBar />
-      <main className={"mt-[70px] print:mt-0" + className}>{children}</main>
+      <main className={" " + className}>{children}</main>
     </>
   )
 }
