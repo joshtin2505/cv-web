@@ -3,7 +3,7 @@ import Link from "next/link"
 import { FaExternalLinkAlt } from "react-icons/fa"
 function ToolsIUse() {
   return (
-    <section className="max-w-5xl mx-auto">
+    <section className="max-w-5xl mx-auto lg:px-0 px-3 min-h-dvh">
       <h2 className="w-full text-start text-3xl sm:text-4xl mb-3 flex">
         <span className="text-red-500 text-3xl sm:text-4xl">&bull;</span>
         Tools I Use
