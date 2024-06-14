@@ -4,17 +4,17 @@ import Image from "next/image"
 
 function CardProject({ project }: { project: Projects }) {
   return (
-    <div className=" bg-neutral-300/40 dark:bg-neutral-800/40 rounded backdrop-blur-md max-w-[400px] flex flex-col shadow-md transition-shadow hover:shadow-xl">
+    <div className=" bg-neutral-300/40 dark:bg-neutral-800/40 rounded backdrop-blur-md max-w-[90%] flex shadow-md transition-shadow hover:shadow-xl border border-black/50 dark:border-white/50 rounded-b">
       <figure className="aspect-video">
         <Image
-          className="w-full object-cover aspect-video rounded-t"
+          className="h-full object-cover aspect-video rounded-t"
           src={project.img[0]}
           alt={project.name}
           width={1000}
           height={1000}
         />
       </figure>
-      <article className="p-2 border border-t-[0px] border-black/50 dark:border-white/50 rounded-b">
+      <article className="p-2 ">
         <Link
           className="text-xl hover:underline capitalize font-medium dark:text-neutral-50"
           href={project.url}
@@ -41,7 +41,7 @@ function CardProject({ project }: { project: Projects }) {
             {project.highlights.map((highlight, index) => (
               <span
                 key={index}
-                className=" bg-neutral-300/70 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-400 rounded-md px-1 capitalize"
+                className=" bg-neutral-300/70 dark:bg-neutral-700 text-neutral-600 dark:text-neutral-300 rounded-md px-1 capitalize"
               >
                 {highlight}
               </span>
