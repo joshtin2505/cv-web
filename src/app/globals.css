@@ -4,18 +4,30 @@
 
 body {
   @apply bg-white dark:bg-black tracking-tight text-neutral-800 dark:text-neutral-300  font-mono-mono;
-  scrollbar-width: thin;
-  scrollbar-color: #ccc #eee;
-  scrollbar-arrow-color: transparent;
-  box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    scrollbar-color: #444 #777;
-    scrollbar-arrow-color: transparent;
-  }
+*::-webkit-scrollbar {
+  width: 10px;
 }
+*::-webkit-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-track {
+  background-color: #777;
+}
+
+*::-moz-scrollbar {
+  width: 10px;
+}
+*::-moz-scrollbar-thumb {
+  background-color: #444;
+  border-radius: 6px;
+}
+*::-moz-scrollbar-track {
+  background-color: #777;
+}
+
 h1,
 h2,
 h3,
@@ -32,6 +44,7 @@ h1 {
   @apply text-2xl;
   unicode-bidi: isolate;
 }
+
 @layer utilities {
   .text-balance {
     text-wrap: balance;
