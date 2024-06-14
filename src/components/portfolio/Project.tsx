@@ -3,16 +3,22 @@ import CardProject from "../ui/CardProject"
 function ProjectsPortfolio() {
   const { projects } = cvJson
   return (
-    <section className="flex gap-2">
-      {projects.length !== 0 ? (
-        projects.map((project) => {
-          return <CardProject key={project.name} project={project} />
-        })
-      ) : (
-        <div>
-          <h1>No projects</h1>
-        </div>
-      )}
+    <section className="flex flex-col items-center gap-2 max-w-5xl mx-auto">
+      <h2 className="w-full text-start text-3xl sm:text-4xl mb-3 flex">
+        <span className="text-red-500 text-3xl sm:text-4xl">&bull;</span>
+        Projects
+      </h2>
+      <div className="grid place-items-center">
+        {projects.length !== 0 ? (
+          projects.map((project) => {
+            return <CardProject key={project.name} project={project} />
+          })
+        ) : (
+          <div>
+            <h1>No projects</h1>
+          </div>
+        )}
+      </div>
     </section>
   )
 }
